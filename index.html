@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Survey Form</title>
+</head>
+<body>
+	<h1>Survey Form</h1>
+	<p class="welcome">Let us know how we can improve freeCodeCamp</p>
+	<form action="/.action_page.php" method="post">
+		<label for="full_name">Name</label>
+		<input type="text" name="full_name" placeholder="Enter your name" required/><br/><br/>
+		
+		<label for="email">Email:</label>
+		<input type="email" name="email" placeholder="Enter your Email" required/><br/><br/>
+        <div style="padding: 120px">
+		<label for="age">Age:</label>
+      <input type="number" name="age" placeholder="Age" />
+		</div>
+		<!-- code below for job input -->
+		<label for="job">Which option best describes your current role?</label>
+		<input type="text" name="job" list="jobs" id="job" required/>
+		<datalist id="jobs">
+			<option value="Student"></option>
+			<option value="Developer"></option>
+			<option value="Business Owner"></option>
+			<option value="Teacher"></option>
+			<option value="Unemployed"></option>
+			<option value="Prefer not to state"></option>
+		</datalist><br><br>
+
+		<!-- checkboxes for recommendation to friends -->
+		<p class="recommendation">How likely is that you would recommend <br> freeCodeCamp to a friend?</p>
+		<input type="radio" name="recommendation" />
+		<label for="recommendation">Definitely</label>
+		<br><br>
+		<input type="radio" name="recommendation" />
+		<label for="recommendation">Maybe</label>
+		<br><br>
+		<input type="radio" name="recommendation" />
+		<label for="recommendation">Not sure</label><br><br>
+		
+		<!-- dropdown list for preferences in FCC -->
+		<label for="preference">What do you like most in FCC:</label>
+		<select name="preference"  >
+			<option value="" selected="selected">Select an option</option>
+			<option value="front_end">Front End</option>
+			<option value="back_end">Back End</option>
+			<option value="full_stack">Full Stack</option>
+		</select><br><br>
+
+		<!-- checkboxes for improvement -->
+		<p>Things that should be improved in the future <br> (Check all that apply):</p>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Front-end Projects</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Back-end Projects</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Data Visualization</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Challenges</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Data Visualization</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Open Source Community</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Gitter help rooms</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Videos</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">City Meetups</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Wiki</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Forum</label>
+		<br>
+		<input type="checkbox" name="improvement" >
+		<label for="improvement">Additional Courses</label>
+		<br><br><br>
+
+		<label for="comment">Any comments or suggestions?</label>
+		<br>
+		<textarea name="comment" cols="30" rows="5" placeholder="Enter your comment here..."></textarea><br><br>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
